@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Instagram — Feed Retrato (Onda 1)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_styles.css">
+<style>
+  .ig-feed {
+    width: 1080px;
+    height: 1350px;
+    color: var(--off-white);
+    position: relative;
+  }
+  .ig-feed .top {
+    position: absolute; top: 64px; left: 64px; right: 64px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .ig-feed .tag {
+    font-size: 16px; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--idp-gold); font-weight: 500;
+  }
+  .ig-feed h1 {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 1.05;
+    margin: 0;
+    letter-spacing: -1px;
+  }
+  .ig-feed h1 em { font-style: normal; color: var(--idp-gold); }
+  .ig-feed p.sub {
+    font-size: 26px; line-height: 1.45;
+    color: rgba(255,255,255,0.82);
+    max-width: 800px;
+  }
+  .ig-feed .body {
+    position: absolute;
+    left: 64px; right: 64px; top: 280px;
+  }
+  .ig-feed .footer {
+    position: absolute; left: 64px; right: 64px; bottom: 64px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .ig-feed .footer .meta {
+    font-size: 16px; letter-spacing: 4px; text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+  }
+  .ig-feed .cta-ig {
+    background: var(--idp-gold);
+    color: var(--idp-blue-deep);
+    font-weight: 700;
+    padding: 22px 36px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Carlos */
+  .ig-carlos {
+    background: linear-gradient(150deg, #1a2a18 0%, #2d3a28 50%, #4a5d3a 100%);
+  }
+  .ig-carlos::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 110%, rgba(168,122,62,0.3), transparent 55%),
+      linear-gradient(180deg, rgba(0,0,0,0.35), transparent 25%, transparent 75%, rgba(0,0,0,0.5));
+  }
+
+  /* Rafael */
+  .ig-rafael {
+    background:
+      linear-gradient(170deg, var(--idp-blue-deep) 0%, var(--idp-blue) 45%, var(--idp-blue-accent) 100%);
+  }
+  .ig-rafael::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 85% 18%, rgba(201,162,75,0.22), transparent 50%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 5px);
+  }
+  .ig-rafael .number-list {
+    display: flex; flex-direction: column; gap: 18px;
+    margin-top: 48px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .ig-rafael .number-list li {
+    list-style: none;
+    display: flex; gap: 24px; align-items: baseline;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-bottom: 16px;
+  }
+  .ig-rafael .number-list .n {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    color: var(--idp-gold);
+    font-size: 38px;
+    font-weight: 700;
+    min-width: 60px;
+  }
+
+  /* Beatriz (alcance) */
+  .ig-beatriz {
+    background: linear-gradient(135deg, #f5f2ec 0%, #ffffff 70%);
+    color: var(--idp-blue-deep);
+  }
+  .ig-beatriz .tag { color: var(--idp-blue-accent); }
+  .ig-beatriz h1 { color: var(--idp-blue-deep); }
+  .ig-beatriz p.sub { color: #1c2a3d; }
+  .ig-beatriz .footer .meta { color: var(--idp-blue-accent); }
+  .ig-beatriz::before {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: 0; height: 280px;
+    background:
+      linear-gradient(to top, rgba(11,42,82,0.15), transparent);
+  }
+  .ig-beatriz .seal {
+    position: absolute; top: 64px; right: 64px;
+    text-align: right;
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--idp-blue-deep);
+    letter-spacing: 1px;
+  }
+  .ig-beatriz .seal small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+
+  <h2>Instagram — Feed Retrato 1080×1350</h2>
+
+  <!-- CARLOS A -->
+  <div class="frame-wrap">
+    <div class="frame ig-feed ig-carlos">
+      <div class="top">
+        <span class="tag">Patrimônio rural</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1>A faculdade não te ensinou <em>holding rural</em>.<br>O IDP ensina.</h1>
+        <p class="sub" style="margin-top:48px;">17 disciplinas. Tributação, sucessão, ESG, financiamento estruturado e regulação ambiental do agro brasileiro.</p>
+      </div>
+      <div class="footer">
+        <div class="meta">LLM em Gestão do Agronegócio<br><span style="opacity:0.6;">Turma 2026</span></div>
+        <span class="cta-ig">Baixar guia →</span>
+      </div>
+    </div>
+    <div class="spec">Carlos · Sucessão · Variação A</div>
+  </div>
+
+  <!-- CARLOS B -->
+  <div class="frame-wrap">
+    <div class="frame ig-feed ig-carlos">
+      <div class="top">
+        <span class="tag">Sucessão patrimonial</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1>Não basta <em>herdar</em> a terra.</h1>
+        <p class="sub" style="margin-top:48px;">Estruturação patrimonial, holding rural, planejamento sucessório e proteção do patrimônio. Formação séria, em Brasília — onde as regras do agro são feitas.</p>
+      </div>
+      <div class="footer">
+        <div class="meta">LLM em Gestão do Agronegócio<br><span style="opacity:0.6;">Turma 2026</span></div>
+        <span class="cta-ig">Conhecer o LLM →</span>
+      </div>
+    </div>
+    <div class="spec">Carlos · Sucessão · Variação B</div>
+  </div>
+
+  <!-- RAFAEL A -->
+  <div class="frame-wrap">
+    <div class="frame ig-feed ig-rafael">
+      <div class="top">
+        <span class="tag">Para o advogado do agro</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1>Pare de terceirizar as operações de agro mais <em>lucrativas</em> da sua carteira.</h1>
+        <ul class="number-list">
+          <li><span class="n">01</span> CRA — Certificado de Recebíveis do Agronegócio</li>
+          <li><span class="n">02</span> CPR Física e Financeira</li>
+          <li><span class="n">03</span> FIAGRO e mercado de capitais do agro</li>
+          <li><span class="n">04</span> Holding rural e estruturação patrimonial</li>
+          <li><span class="n">05</span> Recuperação judicial rural</li>
+        </ul>
+      </div>
+      <div class="footer">
+        <div class="meta">17 disciplinas · 5 pilares<br><span style="opacity:0.6;">Em Brasília</span></div>
+        <span class="cta-ig">Baixar guia →</span>
+      </div>
+    </div>
+    <div class="spec">Rafael · Operações estruturadas · Variação A</div>
+  </div>
+
+  <!-- RAFAEL B -->
+  <div class="frame-wrap">
+    <div class="frame ig-feed ig-rafael">
+      <div class="top">
+        <span class="tag">Advocacia do agro</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1>O agro vai dobrar em operações estruturadas até 2030.<br><em>Quem vai capturar essa demanda?</em></h1>
+        <p class="sub" style="margin-top:48px;">CRA, CPR, FIAGRO, holding rural e securitização — no LLM em Gestão do Agronegócio do IDP. Em Brasília, ao lado de quem regulamenta o setor.</p>
+      </div>
+      <div class="footer">
+        <div class="meta">LLM em Gestão do Agronegócio<br><span style="opacity:0.6;">Turma 2026</span></div>
+        <span class="cta-ig">Ver a grade →</span>
+      </div>
+    </div>
+    <div class="spec">Rafael · Operações estruturadas · Variação B</div>
+  </div>
+
+  <!-- BEATRIZ (versão alcance) -->
+  <div class="frame-wrap">
+    <div class="frame ig-feed ig-beatriz">
+      <div class="top">
+        <span class="tag">Jurídico Corporativo</span>
+        <div class="seal">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></div>
+      </div>
+      <div class="body">
+        <h1>Quando o jurídico interno<br>passa a <em>desenhar</em>, não só revisar.</h1>
+        <p class="sub" style="margin-top:48px;">ESG aplicado. Financiamento estruturado. Compliance no agro. Reforma tributária. O repertório executivo que a sua diretoria está esperando.</p>
+      </div>
+      <div class="footer">
+        <div class="meta">LLM em Gestão do Agronegócio<br><span style="color:var(--muted);">Em Brasília</span></div>
+        <span class="cta-ig">Baixar guia →</span>
+      </div>
+    </div>
+    <div class="spec">Beatriz · Jurídico corporativo · alcance Instagram</div>
+  </div>
+
+</div>
+</body>
+</html>

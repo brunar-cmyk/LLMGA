@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Carrossel LinkedIn — Beatriz</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_styles.css">
+<style>
+  .slide {
+    width: 1080px; height: 1080px;
+    position: relative;
+    background: var(--off-white);
+    color: var(--idp-blue-deep);
+  }
+  .slide::before {
+    content: "";
+    position: absolute; top:0; right:0; width: 12px; bottom:0;
+    background: var(--idp-blue-deep);
+  }
+  .slide .top {
+    position: absolute; top: 56px; left: 64px; right: 96px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .slide .tag {
+    font-size: 13px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--idp-blue-accent); font-weight: 500;
+  }
+  .slide .idp-logo { color: var(--idp-blue-deep); }
+  .slide .idp-logo small { color: var(--muted); }
+  .slide .body {
+    position: absolute; left: 64px; right: 96px; top: 220px;
+  }
+  .slide h1 {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.1;
+    margin: 0;
+    color: var(--idp-blue-deep);
+    letter-spacing: -0.5px;
+  }
+  .slide h1 em { font-style: normal; color: var(--idp-blue-accent); }
+  .slide p.sub {
+    font-size: 24px; line-height: 1.45;
+    color: #2d3a4e;
+    margin-top: 32px;
+  }
+  .slide .num {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 700;
+    font-size: 180px;
+    color: rgba(11,42,82,0.08);
+    position: absolute;
+    right: 96px; top: 140px;
+    line-height: 1;
+  }
+  .slide .pageno {
+    position: absolute; bottom: 56px; left: 64px;
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-size: 28px; color: var(--idp-blue-accent);
+  }
+  .slide .swipe {
+    position: absolute; bottom: 56px; right: 96px;
+    font-size: 12px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .slide.dark {
+    background: linear-gradient(160deg, #061a36, #0b2a52 60%, #1d4a8a);
+    color: var(--off-white);
+  }
+  .slide.dark::before { background: var(--idp-gold); }
+  .slide.dark h1 { color: var(--off-white); }
+  .slide.dark h1 em { color: var(--idp-gold); }
+  .slide.dark p.sub { color: rgba(255,255,255,0.85); }
+  .slide.dark .tag { color: var(--idp-gold); }
+  .slide.dark .idp-logo { color: var(--off-white); }
+  .slide.dark .idp-logo small { color: rgba(255,255,255,0.6); }
+  .slide.dark .pageno { color: var(--idp-gold); }
+  .slide.dark .swipe { color: rgba(255,255,255,0.6); }
+  .cta-final {
+    display: inline-block;
+    background: var(--idp-gold);
+    color: var(--idp-blue-deep);
+    font-weight: 700;
+    padding: 22px 36px;
+    font-size: 22px;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <h2>Carrossel LinkedIn — Beatriz · “5 conversas estratégicas que sua diretoria está tendo”</h2>
+
+  <!-- 1 capa -->
+  <div class="frame-wrap">
+    <div class="frame slide dark">
+      <div class="top">
+        <span class="tag">Para o jurídico corporativo do agro</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body" style="top:340px;">
+        <h1>5 conversas estratégicas que sua diretoria está tendo —<br>e que esperam que <em>você lidere</em>.</h1>
+        <p class="sub">Se você ainda chega no comitê para revisar o que outros decidiram, este carrossel é para você.</p>
+      </div>
+      <div class="pageno">01 / 07</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 1 — Capa</div>
+  </div>
+
+  <!-- 2 ESG -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="num">01</div>
+      <div class="top">
+        <span class="tag">Conversa 01 · ESG e rastreabilidade</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1><em>ESG aplicado</em> ao agro brasileiro.</h1>
+        <p class="sub">O que a União Europeia, a CVM e os bancos estão exigindo agora — e como o seu grupo se adapta antes do próximo ciclo regulatório.</p>
+      </div>
+      <div class="pageno">02 / 07</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 2 — ESG</div>
+  </div>
+
+  <!-- 3 Financiamento -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="num">02</div>
+      <div class="top">
+        <span class="tag">Conversa 02 · Financiamento</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1><em>Financiamento estruturado.</em></h1>
+        <p class="sub">CRA, FIAGRO e o novo perfil de credor do agro. Avaliar criticamente — não só assinar o que o escritório externo entrega.</p>
+      </div>
+      <div class="pageno">03 / 07</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 3 — Financiamento</div>
+  </div>
+
+  <!-- 4 Compliance -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="num">03</div>
+      <div class="top">
+        <span class="tag">Conversa 03 · Compliance no agro</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1><em>Compliance, anticorrupção</em> e due diligence de cadeia.</h1>
+        <p class="sub">Fornecedores, contratos com setor público, integridade da cadeia. Onde a sua empresa está exposta — e onde você ainda não enxerga.</p>
+      </div>
+      <div class="pageno">04 / 07</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 4 — Compliance</div>
+  </div>
+
+  <!-- 5 Transição climática -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="num">04</div>
+      <div class="top">
+        <span class="tag">Conversa 04 · Clima e ambiental</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1><em>Transição climática</em> e regulação ambiental.</h1>
+        <p class="sub">Do Código Florestal ao mercado de carbono. O que pauta o conselho — e o que a diretoria espera ouvir do jurídico.</p>
+      </div>
+      <div class="pageno">05 / 07</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 5 — Clima</div>
+  </div>
+
+  <!-- 6 Comércio exterior -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="num">05</div>
+      <div class="top">
+        <span class="tag">Conversa 05 · Mercado externo</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1><em>Comércio exterior</em> e regulação sanitária.</h1>
+        <p class="sub">Barreiras não tarifárias, embargos, gestão de risco regulatório internacional. Sua empresa exporta — você defende esse fluxo?</p>
+      </div>
+      <div class="pageno">06 / 07</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 6 — Comércio exterior</div>
+  </div>
+
+  <!-- 7 CTA -->
+  <div class="frame-wrap">
+    <div class="frame slide dark">
+      <div class="top">
+        <span class="tag">Próximo passo</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body" style="top:240px;">
+        <h1>A credencial executiva no <em>epicentro regulatório</em> do agro.</h1>
+        <p class="sub">LLM em Gestão do Agronegócio do IDP. Formato compatível com agenda executiva. Em Brasília, onde as regras do agro são feitas.</p>
+        <a class="cta-final">Baixar guia para apresentação interna →</a>
+      </div>
+      <div class="pageno">07 / 07</div>
+    </div>
+    <div class="spec">Slide 7 — CTA final</div>
+  </div>
+
+</div>
+</body>
+</html>

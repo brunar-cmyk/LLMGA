@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>LinkedIn — Imagens Únicas (Onda 1)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_styles.css">
+<style>
+  .li-img {
+    width: 1200px;
+    height: 627px;
+    color: var(--off-white);
+    position: relative;
+    transform-origin: top left;
+  }
+
+  /* Variant 1: Beatriz - ESG */
+  .li-beatriz {
+    background:
+      radial-gradient(circle at 80% 20%, rgba(201,162,75,0.18), transparent 55%),
+      linear-gradient(135deg, var(--idp-blue-deep) 0%, var(--idp-blue) 55%, var(--idp-blue-accent) 100%);
+  }
+  .li-beatriz::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to top, rgba(74,93,58,0.35), transparent 40%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 4px);
+    pointer-events: none;
+  }
+  .li-beatriz .skyline {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 110px;
+    background:
+      linear-gradient(to top, rgba(6,26,54,0.95), transparent),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'><g fill='%23061a36'><rect x='40' y='60' width='100' height='60'/><rect x='160' y='30' width='40' height='90'/><rect x='220' y='50' width='80' height='70'/><rect x='320' y='20' width='30' height='100'/><rect x='370' y='40' width='60' height='80'/><rect x='450' y='10' width='30' height='110'/><rect x='500' y='35' width='90' height='85'/><rect x='610' y='25' width='40' height='95'/><rect x='670' y='55' width='70' height='65'/><rect x='760' y='15' width='30' height='105'/><rect x='810' y='45' width='80' height='75'/><rect x='910' y='30' width='40' height='90'/><rect x='970' y='55' width='100' height='65'/><rect x='1090' y='25' width='40' height='95'/></g></svg>") center bottom / cover no-repeat;
+    opacity: 0.85;
+  }
+  .li-img .header {
+    position: absolute; top: 36px; left: 56px; right: 56px;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 2;
+  }
+  .li-img .pre-headline {
+    font-size: 14px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--idp-gold); font-weight: 500;
+  }
+  .li-img .content {
+    position: absolute; left: 56px; right: 56px; top: 130px; z-index: 3;
+    max-width: 760px;
+  }
+  .li-img h1 {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+    letter-spacing: -0.5px;
+  }
+  .li-img p.sub {
+    font-size: 19px;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.82);
+    margin: 0 0 32px 0;
+    max-width: 640px;
+  }
+  .li-img .footer {
+    position: absolute; bottom: 36px; left: 56px; right: 56px;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 3;
+  }
+
+  /* Variant 2: Rafael - operações */
+  .li-rafael {
+    background:
+      linear-gradient(120deg, var(--paper) 0%, var(--paper) 55%, var(--off-white) 100%);
+    color: var(--idp-blue-deep);
+  }
+  .li-rafael::before {
+    content: "";
+    position: absolute; right: 0; top: 0; bottom: 0;
+    width: 42%;
+    background:
+      linear-gradient(135deg, var(--idp-blue-deep), var(--idp-blue) 70%, var(--idp-blue-accent));
+  }
+  .li-rafael::after {
+    content: "";
+    position: absolute;
+    right: 56px; top: 56px; width: 380px; height: 510px;
+    background:
+      linear-gradient(160deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 50%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 28px, transparent 28px 30px);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .li-rafael .content { color: var(--idp-blue-deep); top: 110px; max-width: 620px; }
+  .li-rafael .content h1 { color: var(--idp-blue-deep); }
+  .li-rafael .content p.sub { color: #2d3a4e; }
+  .li-rafael .pre-headline { color: var(--idp-blue-accent); }
+  .li-rafael .badge-stack {
+    position: absolute; right: 90px; top: 100px; z-index: 5;
+    display: flex; flex-direction: column; gap: 14px; align-items: flex-end;
+  }
+  .li-rafael .badge {
+    background: rgba(255,255,255,0.07);
+    border-left: 3px solid var(--idp-gold);
+    color: var(--off-white);
+    padding: 12px 20px; font-size: 18px; letter-spacing: 1.5px;
+    font-weight: 600; backdrop-filter: blur(2px);
+  }
+  .li-rafael .footer { color: var(--idp-blue-deep); }
+  .li-rafael .footer .cta { background: var(--idp-blue-deep); color: var(--off-white); }
+  .li-rafael .idp-logo { color: var(--idp-blue-deep); }
+
+  /* Variant 3: Carlos - sucessão */
+  .li-carlos {
+    background:
+      linear-gradient(135deg, #1a2a18 0%, #2d3a28 40%, #4a5d3a 100%);
+  }
+  .li-carlos::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 100%, rgba(168,122,62,0.25), transparent 60%),
+      linear-gradient(180deg, rgba(0,0,0,0.45), transparent 30%, transparent 70%, rgba(0,0,0,0.5));
+  }
+  .li-carlos .content h1 { font-weight: 600; }
+  .li-carlos .pre-headline { color: var(--idp-gold); }
+
+  /* Pair grid - show 2 variants side by side */
+  .variant-row { width: 100%; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+  .frame-wrap { display: flex; flex-direction: column; align-items: center; }
+  .scale-50 { transform: scale(0.5); transform-origin: top left; width: 600px; height: 313.5px; overflow: visible; }
+  .scale-50 > .li-img { transform: scale(0.5); }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+
+  <h2>LinkedIn — Imagem Única 1200×627</h2>
+
+  <!-- BEATRIZ A -->
+  <div class="frame-wrap">
+    <div class="frame li-img li-beatriz">
+      <div class="header">
+        <span class="pre-headline">LLM em Gestão do Agronegócio · IDP</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="content">
+        <h1>Lidere a conversa de ESG que a sua diretoria está esperando.</h1>
+        <p class="sub">Formação executiva em Brasília, no epicentro regulatório do agronegócio brasileiro. 17 disciplinas, 5 pilares, professores com atuação direta na regulação federal.</p>
+      </div>
+      <div class="skyline"></div>
+      <div class="footer">
+        <span class="sans" style="font-size:14px; letter-spacing:3px; text-transform:uppercase; opacity:0.7;">Turma 2026 · Inscrições abertas</span>
+        <a class="cta">Baixar Guia do Curso →</a>
+      </div>
+    </div>
+    <div class="spec">Beatriz · ESG e regulação · Variação A</div>
+  </div>
+
+  <!-- BEATRIZ B -->
+  <div class="frame-wrap">
+    <div class="frame li-img li-beatriz">
+      <div class="header">
+        <span class="pre-headline">Persona: Jurídica Corporativa</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="content">
+        <h1>Você revisa o que o escritório externo desenha. Quando começa a desenhar também?</h1>
+        <p class="sub">A credencial executiva que coloca o jurídico interno do mesmo lado da mesa dos full-service do agro.</p>
+      </div>
+      <div class="skyline"></div>
+      <div class="footer">
+        <span class="sans" style="font-size:14px; letter-spacing:3px; text-transform:uppercase; opacity:0.7;">LLM em Gestão do Agronegócio · IDP</span>
+        <a class="cta outline">Conhecer o LLM →</a>
+      </div>
+    </div>
+    <div class="spec">Beatriz · ESG e regulação · Variação B</div>
+  </div>
+
+  <!-- RAFAEL A -->
+  <div class="frame-wrap">
+    <div class="frame li-img li-rafael">
+      <div class="badge-stack">
+        <span class="badge">CRA</span>
+        <span class="badge">CPR</span>
+        <span class="badge">FIAGRO</span>
+        <span class="badge">HOLDING RURAL</span>
+        <span class="badge">REC. JUDICIAL</span>
+      </div>
+      <div class="header">
+        <span class="pre-headline">LLM EM GESTÃO DO AGRONEGÓCIO</span>
+        <span class="idp-logo" style="color:var(--idp-blue-deep);">IDP<small style="color:var(--muted);">INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="content">
+        <h1>CRA, CPR, FIAGRO, holding rural.<br>Em quantas dessas operações você confia para entregar sozinho?</h1>
+        <p class="sub">Pare de terceirizar as operações de agro mais lucrativas da sua carteira.</p>
+      </div>
+      <div class="footer">
+        <span class="sans" style="font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--muted);">Em Brasília · Onde as regras nascem</span>
+        <a class="cta">Ver a grade completa →</a>
+      </div>
+    </div>
+    <div class="spec">Rafael · Operações estruturadas · Variação A</div>
+  </div>
+
+  <!-- RAFAEL B -->
+  <div class="frame-wrap">
+    <div class="frame li-img li-rafael">
+      <div class="badge-stack">
+        <span class="badge">HONORÁRIO</span>
+        <span class="badge">CARTEIRA</span>
+        <span class="badge">AUTORIDADE</span>
+        <span class="badge">NETWORK</span>
+      </div>
+      <div class="header">
+        <span class="pre-headline">PARA ADVOGADOS DO AGRO</span>
+        <span class="idp-logo" style="color:var(--idp-blue-deep);">IDP<small style="color:var(--muted);">INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="content">
+        <h1>Especialização é o que move honorário.<br>O resto é commodity.</h1>
+        <p class="sub">O LLM em Gestão do Agronegócio do IDP forma quem opera — não quem só estuda.</p>
+      </div>
+      <div class="footer">
+        <span class="sans" style="font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--muted);">17 disciplinas · 5 pilares · Turma 2026</span>
+        <a class="cta">Baixar Guia do Curso →</a>
+      </div>
+    </div>
+    <div class="spec">Rafael · Operações estruturadas · Variação B</div>
+  </div>
+
+  <!-- CARLOS A -->
+  <div class="frame-wrap">
+    <div class="frame li-img li-carlos">
+      <div class="header">
+        <span class="pre-headline">Para quem cuida de patrimônio rural</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="content">
+        <h1>Uma sucessão mal estruturada pode custar milhões em tributo.<br>O curso custa uma fração disso.</h1>
+        <p class="sub">Planejamento patrimonial, holding rural, ITR e regularização fundiária — no LLM em Gestão do Agronegócio do IDP. Em Brasília, onde as regras do agro são feitas.</p>
+      </div>
+      <div class="footer">
+        <span class="sans" style="font-size:14px; letter-spacing:3px; text-transform:uppercase; opacity:0.75;">Turma 2026 · Inscrições abertas</span>
+        <a class="cta">Baixar Guia do Curso →</a>
+      </div>
+    </div>
+    <div class="spec">Carlos · Sucessão patrimonial · Variação A</div>
+  </div>
+
+  <!-- CARLOS B -->
+  <div class="frame-wrap">
+    <div class="frame li-img li-carlos">
+      <div class="header">
+        <span class="pre-headline">Sucessores familiares</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="content">
+        <h1>Sua faculdade de Direito não te ensinou holding rural.<br>O IDP ensina.</h1>
+        <p class="sub">Tributação, sucessão, regularização fundiária e estruturação patrimonial do agro. Formação séria, em Brasília.</p>
+      </div>
+      <div class="footer">
+        <span class="sans" style="font-size:14px; letter-spacing:3px; text-transform:uppercase; opacity:0.75;">LLM em Gestão do Agronegócio · IDP</span>
+        <a class="cta outline">Conhecer o LLM →</a>
+      </div>
+    </div>
+    <div class="spec">Carlos · Sucessão patrimonial · Variação B</div>
+  </div>
+
+</div>
+</body>
+</html>

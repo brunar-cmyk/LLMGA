@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Reels — Storyboards (Carlos · Sucessão | Rafael · 3 perguntas)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_styles.css">
+<style>
+  .reel-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 22px; width: 100%; }
+  .reel-frame {
+    width: 540px; height: 960px;
+    position: relative;
+    color: var(--off-white);
+    overflow: hidden;
+  }
+  .reel-frame .time {
+    position: absolute; top: 24px; left: 24px;
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 700; font-size: 22px;
+    color: var(--idp-gold);
+    background: rgba(0,0,0,0.4);
+    padding: 6px 14px;
+    border-radius: 4px;
+    z-index: 10;
+  }
+  .reel-frame .caption {
+    position: absolute; left: 32px; right: 32px; bottom: 90px;
+    z-index: 5;
+  }
+  .reel-frame h2 {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .reel-frame h2 em { font-style: normal; color: var(--idp-gold); }
+  .reel-frame p.note {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.8);
+  }
+  .reel-frame .lower-third {
+    position: absolute; bottom: 30px; left: 32px; right: 32px;
+    font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 12px;
+  }
+  .reel-frame.bg-1 { background: linear-gradient(180deg, #1a2a18 0%, #0b2a52 100%); }
+  .reel-frame.bg-2 { background: linear-gradient(160deg, #0b2a52, #1d4a8a); }
+  .reel-frame.bg-3 { background: linear-gradient(135deg, #0b2a52, #061a36 80%); }
+  .reel-frame.bg-4 { background: linear-gradient(165deg, #4a5d3a 0%, #2d3a28 100%); }
+  .reel-frame.bg-5 { background: linear-gradient(180deg, #061a36, #1d4a8a 70%); }
+  .reel-frame .big-number {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 700;
+    font-size: 360px;
+    color: rgba(201,162,75,0.16);
+    position: absolute;
+    right: -40px; top: 80px;
+    line-height: 1;
+  }
+  .reel-frame .pop-text {
+    position: absolute;
+    top: 200px; left: 32px; right: 32px;
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-size: 56px;
+    line-height: 1.1;
+    color: var(--off-white);
+    z-index: 4;
+  }
+  .reel-frame .pop-text em { font-style: normal; color: var(--idp-gold); }
+  .reel-frame .question {
+    position: absolute; left: 32px; right: 32px; top: 220px;
+    z-index: 4;
+  }
+  .reel-frame .question .q-tag {
+    display: inline-block;
+    background: var(--idp-gold);
+    color: var(--idp-blue-deep);
+    font-weight: 700; font-size: 16px;
+    letter-spacing: 3px; text-transform: uppercase;
+    padding: 8px 16px;
+    margin-bottom: 22px;
+  }
+  .reel-frame .question h3 {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-size: 40px; line-height: 1.15;
+    margin: 0;
+    font-weight: 600;
+  }
+  .reel-frame .cta-card {
+    position: absolute; left: 32px; right: 32px; top: 250px;
+    background: var(--off-white);
+    color: var(--idp-blue-deep);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .reel-frame .cta-card h3 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 36px;
+    margin: 0 0 12px 0;
+    color: var(--idp-blue-deep);
+  }
+  .reel-frame .cta-card .cta-btn {
+    display: inline-block; margin-top: 18px;
+    background: var(--idp-gold); color: var(--idp-blue-deep);
+    padding: 14px 24px; font-weight: 700; font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+
+  <h2>Reels — Carlos · “Sucessão patrimonial rural em 2026” (30s, 1080×1920 mostrado em 540×960)</h2>
+  <div class="reel-row" style="gap:22px; display:flex; flex-wrap:wrap; justify-content:center;">
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-1">
+        <div class="time">0–3s</div>
+        <div class="pop-text" style="top:340px;">Pergunta para quem vai <em>herdar fazenda</em>.</div>
+        <div class="lower-third">Roteiro · Reels Carlos</div>
+      </div>
+      <div class="spec">Quadro 1 — Hook</div>
+    </div>
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-4">
+        <div class="time">3–8s</div>
+        <div class="pop-text" style="top:280px;">Você sabe quanto custa uma sucessão <em>mal estruturada?</em></div>
+        <div class="caption" style="bottom:160px;">
+          <h2 style="font-size:120px;"><em>8%</em></h2>
+          <p class="note">do valor do patrimônio em ITCMD — sem contar tributos federais e disputas familiares.</p>
+        </div>
+        <div class="lower-third">Quadro de número grande na tela</div>
+      </div>
+      <div class="spec">Quadro 2 — Dado</div>
+    </div>
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-2">
+        <div class="time">8–18s</div>
+        <div class="caption" style="bottom:200px;">
+          <h2>Holding rural, doação em vida, partilha, ITR.<br>Tem <em>janela</em>.</h2>
+          <p class="note">E essa janela está se fechando com a reforma tributária.</p>
+        </div>
+        <div class="lower-third">Voice-over · professor à câmera</div>
+      </div>
+      <div class="spec">Quadro 3 — Desenvolvimento</div>
+    </div>
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-3">
+        <div class="time">18–25s</div>
+        <div class="caption" style="bottom:240px;">
+          <h2>A formação séria para quem cuida de <em>patrimônio rural</em>.</h2>
+          <p class="note">LLM em Gestão do Agronegócio — IDP</p>
+        </div>
+        <div class="lower-third">Texto em tela · selos das disciplinas</div>
+      </div>
+      <div class="spec">Quadro 4 — Posicionamento</div>
+    </div>
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-5">
+        <div class="time">25–30s</div>
+        <div class="cta-card">
+          <h3>Em Brasília,<br>onde as regras do agro<br>são feitas.</h3>
+          <span class="cta-btn">Baixar guia · link na bio</span>
+        </div>
+        <div class="lower-third">Card final · CTA + logo IDP</div>
+      </div>
+      <div class="spec">Quadro 5 — CTA</div>
+    </div>
+
+  </div>
+
+  <h2>Reels — Rafael · “3 perguntas que separam advogado generalista de advogado do agro” (25s)</h2>
+  <div class="reel-row" style="gap:22px; display:flex; flex-wrap:wrap; justify-content:center;">
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-3">
+        <div class="time">0–3s</div>
+        <div class="pop-text" style="top:320px;">3 perguntas.<br>Se você não souber 2,<br>sua <em>carteira</em> está vazando.</div>
+        <div class="lower-third">Hook · texto em tela rápido</div>
+      </div>
+      <div class="spec">Quadro 1 — Hook</div>
+    </div>
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-2">
+        <div class="time">3–10s</div>
+        <div class="big-number">01</div>
+        <div class="question">
+          <span class="q-tag">Pergunta 1</span>
+          <h3>O que muda na execução de uma <em>CPR Física</em> versus uma <em>CPR Financeira?</em></h3>
+        </div>
+        <div class="lower-third">Apresentador à câmera</div>
+      </div>
+      <div class="spec">Quadro 2 — Q1</div>
+    </div>
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-2">
+        <div class="time">10–17s</div>
+        <div class="big-number">02</div>
+        <div class="question">
+          <span class="q-tag">Pergunta 2</span>
+          <h3>Como você estrutura uma <em>holding rural</em> sem disparar ITBI?</h3>
+        </div>
+        <div class="lower-third">Apresentador · close</div>
+      </div>
+      <div class="spec">Quadro 3 — Q2</div>
+    </div>
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-2">
+        <div class="time">17–22s</div>
+        <div class="big-number">03</div>
+        <div class="question">
+          <span class="q-tag">Pergunta 3</span>
+          <h3>Quem regula a emissão de <em>CRA</em> — e por que isso muda o desenho da operação?</h3>
+        </div>
+        <div class="lower-third">Apresentador · plano aberto</div>
+      </div>
+      <div class="spec">Quadro 4 — Q3</div>
+    </div>
+
+    <div class="frame-wrap">
+      <div class="frame reel-frame bg-5">
+        <div class="time">22–25s</div>
+        <div class="cta-card" style="top:280px;">
+          <h3>LLM em Gestão do<br>Agronegócio.<br>IDP. Em Brasília.</h3>
+          <span class="cta-btn">Toque para conhecer →</span>
+        </div>
+        <div class="lower-third">Card final · logo IDP</div>
+      </div>
+      <div class="spec">Quadro 5 — CTA</div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

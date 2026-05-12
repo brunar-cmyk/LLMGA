@@ -1,0 +1,93 @@
+/* Paleta IDP e tokens compartilhados */
+:root {
+  --idp-blue: #0b2a52;
+  --idp-blue-deep: #061a36;
+  --idp-blue-accent: #1d4a8a;
+  --idp-gold: #c9a24b;
+  --moss: #4a5d3a;
+  --ocre: #a87a3e;
+  --off-white: #f5f2ec;
+  --paper: #ffffff;
+  --ink: #0f1722;
+  --muted: #6b7280;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 32px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: #2b2b30;
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.gallery h2 {
+  width: 100%;
+  color: #f1f1f1;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 32px;
+}
+
+.spec {
+  color: #aaa;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.frame {
+  background: var(--paper);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  overflow: hidden;
+  position: relative;
+}
+
+.serif { font-family: 'Source Serif Pro', 'Georgia', 'Times New Roman', serif; }
+.sans  { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+
+/* CTA button base */
+.cta {
+  display: inline-block;
+  background: var(--idp-gold);
+  color: var(--idp-blue-deep);
+  font-weight: 700;
+  text-transform: none;
+  padding: 12px 22px;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.cta.outline {
+  background: transparent;
+  color: var(--off-white);
+  border: 1.5px solid var(--off-white);
+}
+
+.idp-logo {
+  font-family: 'Source Serif Pro', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--off-white);
+}
+
+.idp-logo small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 10px;
+  opacity: 0.7;
+  margin-top: 2px;
+}

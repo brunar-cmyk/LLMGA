@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Carrossel Instagram — Carlos</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_styles.css">
+<style>
+  .slide {
+    width: 1080px; height: 1350px;
+    position: relative;
+    color: var(--off-white);
+    background: linear-gradient(165deg, #1a2a18 0%, #2d3a28 50%, #4a5d3a 100%);
+  }
+  .slide::after {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 110%, rgba(168,122,62,0.25), transparent 55%),
+      linear-gradient(180deg, rgba(0,0,0,0.3), transparent 25%, transparent 75%, rgba(0,0,0,0.45));
+    pointer-events: none;
+  }
+  .slide .top {
+    position: absolute; top: 56px; left: 64px; right: 64px;
+    display: flex; justify-content: space-between; align-items: center; z-index: 2;
+  }
+  .slide .tag {
+    font-size: 14px; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--idp-gold);
+  }
+  .slide .body {
+    position: absolute; left: 64px; right: 64px; top: 260px; z-index: 2;
+  }
+  .slide h1 {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 600;
+    font-size: 84px;
+    line-height: 1.05;
+    margin: 0;
+    letter-spacing: -0.5px;
+  }
+  .slide h1 em { color: var(--idp-gold); font-style: normal; }
+  .slide p.sub {
+    font-size: 28px; line-height: 1.5;
+    color: rgba(255,255,255,0.85);
+    margin-top: 36px;
+  }
+  .slide .pageno {
+    position: absolute; bottom: 56px; left: 64px; z-index: 2;
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-size: 30px; color: var(--idp-gold);
+  }
+  .slide .swipe {
+    position: absolute; bottom: 56px; right: 64px; z-index: 2;
+    font-size: 14px; letter-spacing: 4px; text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+  .slide .bullets {
+    margin-top: 56px;
+    display: flex; flex-direction: column; gap: 28px;
+  }
+  .slide .bullets li {
+    list-style: none;
+    display: flex; gap: 22px;
+    font-size: 30px; line-height: 1.4;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-bottom: 22px;
+  }
+  .slide .bullets li::before {
+    content: "—";
+    color: var(--idp-gold);
+    font-family: 'Source Serif Pro', Georgia, serif;
+    flex-shrink: 0;
+  }
+
+  .slide.final {
+    background: linear-gradient(160deg, #0b2a52, #1d4a8a 80%);
+  }
+  .slide.final::after {
+    background:
+      radial-gradient(circle at 80% 15%, rgba(201,162,75,0.18), transparent 50%);
+  }
+  .cta-final {
+    display: inline-block;
+    background: var(--idp-gold);
+    color: var(--idp-blue-deep);
+    font-weight: 700;
+    padding: 26px 40px;
+    font-size: 26px;
+    margin-top: 56px;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <h2>Carrossel Instagram — Carlos · “O que a faculdade não te ensinou”</h2>
+
+  <!-- Slide 1 -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="top">
+        <span class="tag">Patrimônio rural</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body" style="top:340px;">
+        <h1>O que sua faculdade de Direito <em>não te ensinou</em> sobre patrimônio rural.</h1>
+        <p class="sub">Cinco temas que a graduação não cobre — e que sua família precisa que você domine.</p>
+      </div>
+      <div class="pageno">01 / 06</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 1 — Capa</div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="top">
+        <span class="tag">Tópico 01 · Estruturas</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1><em>Holding rural</em><br>quando faz sentido.</h1>
+        <ul class="bullets">
+          <li>Riscos tributários da integralização de imóveis</li>
+          <li>Armadilhas do ITBI rural e do ITR</li>
+          <li>Quando holding protege e quando expõe</li>
+        </ul>
+      </div>
+      <div class="pageno">02 / 06</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 2 — Holding rural</div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="top">
+        <span class="tag">Tópico 02 · Tributação</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1><em>ITR, ITBI</em><br>e a janela tributária.</h1>
+        <p class="sub">A reforma tributária está mudando o desenho de estruturação patrimonial rural. Quem age antes paga menos.</p>
+      </div>
+      <div class="pageno">03 / 06</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 3 — Janela tributária</div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="top">
+        <span class="tag">Tópico 03 · Regularização</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1><em>CAR, registro</em><br>e responsabilidade ambiental.</h1>
+        <p class="sub">Regularização fundiária, Código Florestal e o impacto direto na avaliação patrimonial e no acesso a crédito.</p>
+      </div>
+      <div class="pageno">04 / 06</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 4 — Regularização</div>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="frame-wrap">
+    <div class="frame slide">
+      <div class="top">
+        <span class="tag">Tópico 04 · Sucessão</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body">
+        <h1><em>Planejamento sucessório.</em></h1>
+        <ul class="bullets">
+          <li>Doação em vida × partilha</li>
+          <li>Proteção contra disputas familiares</li>
+          <li>ITCMD e o custo de errar a sucessão</li>
+        </ul>
+      </div>
+      <div class="pageno">05 / 06</div>
+      <div class="swipe">Arraste →</div>
+    </div>
+    <div class="spec">Slide 5 — Sucessão</div>
+  </div>
+
+  <!-- Slide 6 -->
+  <div class="frame-wrap">
+    <div class="frame slide final">
+      <div class="top">
+        <span class="tag">Próximo passo</span>
+        <span class="idp-logo">IDP<small>INSTITUTO BRASILIENSE DE DIREITO PÚBLICO</small></span>
+      </div>
+      <div class="body" style="top:280px;">
+        <h1>Proteja décadas de patrimônio com <em>formação séria</em>.</h1>
+        <p class="sub">LLM em Gestão do Agronegócio do IDP. 17 disciplinas. Em Brasília — onde as regras do agro são feitas.</p>
+        <a class="cta-final">Baixar Guia do Curso →</a>
+      </div>
+      <div class="pageno">06 / 06</div>
+    </div>
+    <div class="spec">Slide 6 — CTA final</div>
+  </div>
+
+</div>
+</body>
+</html>
